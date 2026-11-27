@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# 🌿 Plantopedia
 
-First, run the development server:
+Enciclopedia botánica desarrollada con Next.js 16, React y TypeScript como parte de la actividad de implementación mediante Vibe Coding.
+
+## Descripción
+
+Plantopedia es una aplicación web informativa que permite explorar diferentes especies vegetales, consultar sus características y filtrar plantas por categoría.
+
+## Tecnologías utilizadas
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS
+- CSS personalizado
+- API interna mediante Route Handlers
+- Git y GitHub
+
+## Funcionalidades
+
+- Página de inicio.
+- Catálogo de plantas.
+- Búsqueda por nombre común o científico.
+- Filtro por categorías.
+- Consulta de información de plantas.
+- API interna para obtener los datos.
+- Componentes de servidor y cliente.
+- Estados de carga y error.
+- Diseño adaptable a dispositivos móviles y escritorio.
+
+## Estructura del proyecto
+
+```text
+src/
+├── app/
+│   ├── api/
+│   │   └── plantas/
+│   │       └── route.ts
+│   ├── categorias/
+│   │   └── page.tsx
+│   ├── nosotros/
+│   │   └── page.tsx
+│   ├── plantas/
+│   │   ├── [id]/
+│   │   │   └── page.tsx
+│   │   └── page.tsx
+│   ├── error.tsx
+│   ├── loading.tsx
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+└── components/
+    └── CatalogoPlantas.tsx
+```
+
+## Instalación
+
+Requisitos:
+- Node.js compatible con Next.js 16.
+- npm.
+
+Clonar el repositorio:
+
+```bash
+git clone 
+```
+
+Entrar al proyecto:
+
+```bash
+cd plantopedia-vibe
+```
+
+Instalar dependencias:
+
+```bash
+npm install
+```
+
+Ejecutar en desarrollo:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrir http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## API interna
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+La aplicación dispone de un Route Handler:
 
-## Learn More
+`GET /api/plantas`
 
-To learn more about Next.js, take a look at the following resources:
+Este endpoint devuelve los datos de las plantas en formato JSON.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Compilación para producción
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run build
+```
 
-## Deploy on Vercel
+Ejecutar la versión compilada:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run start
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Variables de entorno
+
+Actualmente no se requieren variables de entorno. Se incluye `.env.example` como referencia para futuras integraciones.
+
+## Despliegue
+
+La aplicación está preparada para desplegarse en Vercel mediante la conexión con GitHub.
+
+## Autoría
+
+Proyecto académico desarrollado mediante un flujo de trabajo asistido por inteligencia artificial (Vibe Coding).

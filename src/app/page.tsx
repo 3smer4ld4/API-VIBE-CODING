@@ -1,69 +1,110 @@
-import Image from "next/image";
+
+import CatalogoPlantas from "@/components/CatalogoPlantas";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
+    <main>
+      <header className="navbar">
+        <a href="/" className="brand">
+          <span className="brand-icon">🌿</span>
+          Plantopedia
+        </a>
+
+        <nav className="nav-links">
+          <a href="/">Inicio</a>
+          <a href="/plantas">Plantas</a>
+          <a href="/categorias">Categorías</a>
+          <a href="/nosotros">Nosotros</a>
+        </nav>
+
+        <a href="#catalogo" className="nav-button">
+          Explorar
+        </a>
+      </header>
+
+      <section className="hero">
+        <div className="hero-content">
+          <span className="eyebrow">ENCICLOPEDIA BOTÁNICA DIGITAL</span>
+          <h1>
+            Descubre el fascinante mundo de las <span>plantas.</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p>
+            Aprende sobre especies, características y cuidados.
+            Encuentra inspiración para conectar con la naturaleza.
           </p>
+
+          <div className="hero-actions">
+            <a href="#catalogo" className="primary-button">
+              Explorar catálogo →
+            </a>
+            <a href="/nosotros" className="secondary-button">
+              Conoce Plantopedia
+            </a>
+          </div>
+
+          <div className="hero-stats">
+            <div>
+              <strong>100%</strong>
+              <span>Pasión natural</span>
+            </div>
+            <div>
+              <strong>🌱</strong>
+              <span>Aprendizaje botánico</span>
+            </div>
+            <div>
+              <strong>∞</strong>
+              <span>Especies por descubrir</span>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="hero-art" aria-label="Ilustración decorativa de plantas">
+          <div className="art-circle">
+            <span className="art-leaf leaf-one">🌿</span>
+            <span className="art-leaf leaf-two">🍃</span>
+            <span className="art-leaf leaf-three">🌱</span>
+            <span className="art-center">P</span>
+          </div>
+          <div className="floating-note">
+            <span>🌼</span>
+            <div>
+              <strong>Conocimiento natural</strong>
+              <small>Crece aprendiendo</small>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="intro-section">
+        <span className="eyebrow">EXPLORA Y APRENDE</span>
+        <h2>La naturaleza tiene mucho que enseñarte</h2>
+        <p>
+          Una guía para conocer la diversidad del reino vegetal,
+          descubrir nuevas especies y aprender a cuidarlas.
+        </p>
+      </section>
+
+      <CatalogoPlantas />
+
+      <section className="bottom-banner">
+        <div>
+          <span className="eyebrow">CADA PLANTA TIENE UNA HISTORIA</span>
+          <h2>El conocimiento también puede echar raíces.</h2>
+          <p>Explora, aprende y descubre el mundo vegetal.</p>
+        </div>
+        <a href="/categorias" className="primary-button">
+          Ver categorías →
+        </a>
+      </section>
+
+      <footer className="footer">
+        <a href="/" className="brand">
+          <span className="brand-icon">🌿</span>
+          Plantopedia
+        </a>
+        <p>Una enciclopedia digital para amantes de la naturaleza.</p>
+        <small>© 2026 Plantopedia. Proyecto educativo.</small>
+      </footer>
+    </main>
   );
 }
