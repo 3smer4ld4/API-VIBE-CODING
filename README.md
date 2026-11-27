@@ -53,7 +53,10 @@ src/
 └── components/
     └── CatalogoPlantas.tsx
 ```
-
+## Visualizaciòn
+```
+https://api-vibecoding.vercel.app/
+```
 ## Instalación
 
 Requisitos:
@@ -63,7 +66,7 @@ Requisitos:
 Clonar el repositorio:
 
 ```bash
-git clone 
+git clone https://github.com/3smer4ld4/API-VIBE-CODING.git
 ```
 
 Entrar al proyecto:
