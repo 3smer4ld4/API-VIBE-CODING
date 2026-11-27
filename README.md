@@ -117,3 +117,9 @@ La aplicación está preparada para desplegarse en Vercel mediante la conexión 
 ## Autoría
 
 Proyecto académico desarrollado mediante un flujo de trabajo asistido por inteligencia artificial (Vibe Coding).
+
+Nomas como una nota general de las entregas de este dia, me hubiera gustado mas manejar Plantitis Informativa y esta esta basada en parte en ella y su antecesora Hojijitas, pero bueno, igualmente seria interesante implementar todo en uno con laravel, next,js las auth y demas agregados para una pagina web mas similar a INaturalist;
+mi favorita fue la de gestor de actividades con typescript : 3
+igualmente muchas gracias
+
+Todos los derechos reservados a mi gato
